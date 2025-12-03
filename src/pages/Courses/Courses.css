@@ -1,28 +1,15 @@
+/* ====================================================
+      COURSES PAGE BASE
+==================================================== */
 .courses-page {
   width: 100%;
   padding: 50px 120px;
-  background: #0f172a;
-  color: #e2e8f0;
   overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .courses-header {
   margin-bottom: 40px;
-}
-
-.courses-header h4 {
-  color: #38bdf8;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-
-.courses-header h1 {
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.courses-header p {
-  color: #94a3b8;
 }
 
 .courses-layout {
@@ -31,40 +18,83 @@
   gap: 30px;
 }
 
-/* LEFT SIDE FORM */
-.course-form label {
-  margin-top: 15px;
-  margin-bottom: 5px;
-  display: block;
-  color: #cbd5e1;
+/* ====================================================
+      DARK THEME
+==================================================== */
+body[data-theme="dark"] .courses-page {
+  background: #0f172a;
+  color: #e2e8f0;
 }
 
-.course-form select,
-.course-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
+body[data-theme="dark"] .courses-header h1 {
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .courses-header p {
+  color: #94a3b8;
+}
+
+body[data-theme="dark"] .glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body[data-theme="dark"] .course-form select,
+body[data-theme="dark"] .course-form textarea {
   background: #1e293b;
   border: 1px solid #334155;
   color: #e2e8f0;
-  border-radius: 8px;
 }
 
-.primary-btn {
-  background: #3b82f6;
-  padding: 12px 16px;
-  border: none;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
+body[data-theme="dark"] .course-info li,
+body[data-theme="dark"] .highlights-box li {
+  color: #cbd5e1;
 }
 
-.note {
-  margin-top: 10px;
-  color: #64748b;
+/* ====================================================
+      LIGHT THEME
+==================================================== */
+body[data-theme="light"] .courses-page {
+  background: #ffffff;
+  color: #000000;
 }
 
-/* RIGHT SIDE BOXES */
+body[data-theme="light"] .courses-header h1 {
+  color: #000;
+}
+
+body[data-theme="light"] .courses-header p {
+  color: #444;
+}
+
+body[data-theme="light"] .glass-card {
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid #cbd5e1;
+}
+
+body[data-theme="light"] .course-form label {
+  color: #333;
+}
+
+body[data-theme="light"] .course-form select,
+body[data-theme="light"] .course-form textarea {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #000;
+}
+
+body[data-theme="light"] .course-info li,
+body[data-theme="light"] .highlights-box li {
+  color: #333;
+}
+
+body[data-theme="light"] .highlights-box h3 {
+  color: #000;
+}
+
+/* ====================================================
+      RIGHT SIDE BOXES
+==================================================== */
 .right-side {
   display: flex;
   flex-direction: column;
@@ -72,11 +102,10 @@
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
   padding: 25px;
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 
 .course-info ul,
@@ -87,10 +116,28 @@
 .course-info li,
 .highlights-box li {
   margin-bottom: 8px;
-  color: #cbd5e1;
 }
 
-/* Responsive */
+/* ====================================================
+      BUTTONS
+==================================================== */
+.primary-btn {
+  background: #3b82f6;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.note {
+  margin-top: 10px;
+  color: #64748b;
+}
+
+/* ====================================================
+      RESPONSIVE DESIGN
+==================================================== */
 @media (max-width: 900px) {
   .courses-layout {
     grid-template-columns: 1fr;

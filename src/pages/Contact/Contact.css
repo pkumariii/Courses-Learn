@@ -1,11 +1,83 @@
+/* ====================================================
+      CONTACT PAGE BASE
+==================================================== */
 .contact-page {
   width: 100%;
   padding: 50px 120px;
-  background: #0f172a;
-  color: #e2e8f0;
   overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* ====================================================
+      DARK THEME
+==================================================== */
+body[data-theme="dark"] .contact-page {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body[data-theme="dark"] .glass-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body[data-theme="dark"] .contact-form input,
+body[data-theme="dark"] .contact-form textarea {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+}
+
+body[data-theme="dark"] .contact-info p,
+body[data-theme="dark"] .helpful-box ul li {
+  color: #cbd5e1;
+}
+
+/* ====================================================
+      LIGHT THEME
+==================================================== */
+body[data-theme="light"] .contact-page {
+  background: #ffffff;
+  color: #000000;
+}
+
+body[data-theme="light"] .contact-header h1 {
+  color: #000;
+}
+
+body[data-theme="light"] .contact-header p {
+  color: #333;
+}
+
+body[data-theme="light"] .glass-card {
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid #cbd5e1;
+}
+
+body[data-theme="light"] .contact-form label {
+  color: #222;
+}
+
+body[data-theme="light"] .contact-form input,
+body[data-theme="light"] .contact-form textarea {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #000;
+}
+
+body[data-theme="light"] .contact-info h3,
+body[data-theme="light"] .helpful-box h3 {
+  color: #000;
+}
+
+body[data-theme="light"] .contact-info p,
+body[data-theme="light"] .helpful-box ul li {
+  color: #444;
+}
+
+/* ====================================================
+      HEADER SECTION
+==================================================== */
 .contact-header {
   margin-bottom: 40px;
 }
@@ -17,47 +89,49 @@
 }
 
 .contact-header h1 {
-  color: #fff;
   margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
 
 .contact-header p {
-  color: #94a3b8;
+  transition: color 0.3s ease;
 }
 
-/* Layout */
+/* ====================================================
+      LAYOUT
+==================================================== */
 .contact-layout {
   display: grid;
   grid-template-columns: 2fr 1.2fr;
   gap: 30px;
 }
 
-/* Glass Card */
+/* ====================================================
+      GLASS CARDS
+==================================================== */
 .glass-card {
-  background: rgba(255, 255, 255, 0.06);
   padding: 25px;
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 
-/* Left Form */
+/* ====================================================
+      LEFT SIDE FORM
+==================================================== */
 .contact-form label {
   display: block;
   margin-top: 15px;
   margin-bottom: 5px;
-  color: #cbd5e1;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 12px;
-  background: #1e293b;
-  border: 1px solid #334155;
   border-radius: 8px;
   margin-bottom: 10px;
-  color: #e2e8f0;
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 
 .primary-btn {
@@ -65,7 +139,7 @@
   padding: 12px 16px;
   border: none;
   border-radius: 8px;
-  color: #fff;
+  color: white;
   cursor: pointer;
   margin-top: 10px;
 }
@@ -75,7 +149,9 @@
   color: #64748b;
 }
 
-/* Right Side Boxes */
+/* ====================================================
+      RIGHT SIDE
+==================================================== */
 .right-side {
   display: flex;
   flex-direction: column;
@@ -84,7 +160,8 @@
 
 .contact-info h3,
 .helpful-box h3 {
-  color: #fff;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
 
 .contact-info h4 {
@@ -93,6 +170,7 @@
 
 .contact-info p {
   margin-bottom: 6px;
+  transition: color 0.3s ease;
 }
 
 .map {
@@ -103,17 +181,18 @@
   margin-top: 15px;
 }
 
-/* Helpful links */
 .helpful-box ul {
   margin-top: 10px;
 }
 
 .helpful-box ul li {
   margin-bottom: 10px;
-  color: #cbd5e1;
+  transition: color 0.3s ease;
 }
 
-/* Responsive */
+/* ====================================================
+      RESPONSIVE
+==================================================== */
 @media (max-width: 900px) {
   .contact-layout {
     grid-template-columns: 1fr;

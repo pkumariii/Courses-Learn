@@ -1,28 +1,162 @@
-/* GENERAL */
+/* ====================================================
+        GLOBAL BASE
+==================================================== */
 body {
   margin: 0;
-  background: #0d1117;
   font-family: Arial, sans-serif;
-  color: white;
+  transition: background 0.3s, color 0.3s;
 }
 
 .main {
   width: 100%;
 }
 
-/* NAVBAR */
-.navbar {
+/* ====================================================
+        DARK THEME
+==================================================== */
+body[data-theme="dark"] {
+  background: #0d1117;
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .navbar {
   background: #0f1624;
+}
+
+body[data-theme="dark"] .logo {
+  color: #5bc6ff;
+}
+
+body[data-theme="dark"] .nav-links li {
+  color: #cbd5e1;
+}
+
+body[data-theme="dark"] .login-btn {
+  background: #2563eb;
+  color: #fff;
+}
+
+body[data-theme="dark"] .course-card,
+body[data-theme="dark"] .price-card {
+  background: #141c27;
+  border: 1px solid #2c3a4d;
+}
+
+body[data-theme="dark"] .price-card.highlight {
+  background: #2563eb;
+  color: white;
+  border-color: #4ca4ff;
+}
+
+body[data-theme="dark"] .test-card {
+  background: #ffffff;
+  color: #000;
+}
+
+body[data-theme="dark"] .footer {
+  background: #0f1624;
+  color: #aaa;
+}
+
+/* ====================================================
+        LIGHT THEME
+==================================================== */
+body[data-theme="light"] {
+  background: #ffffff;
+  color: #000000;
+}
+
+body[data-theme="light"] .navbar {
+  background: #e8eef6;
+}
+
+body[data-theme="light"] .logo {
+  color: #0054a6;
+}
+
+body[data-theme="light"] .nav-links li {
+  color: #333;
+}
+
+body[data-theme="light"] .login-btn {
+  background: #1d4ed8;
+  color: white;
+}
+
+/* Hero adjustments */
+body[data-theme="light"] .hero p {
+  color: #555;
+}
+
+/* Cards */
+body[data-theme="light"] .course-card,
+body[data-theme="light"] .price-card {
+  background: #f0f4fa;
+  border: 1px solid #d0d7e3;
+}
+
+body[data-theme="light"] .course-card:hover {
+  border-color: #2563eb;
+}
+
+body[data-theme="light"] .price-card.highlight {
+  background: #3b82f6;
+  color: #fff;
+}
+
+body[data-theme="light"] .price-card li {
+  color: #333;
+}
+
+/* Testimonials */
+body[data-theme="light"] .test-card {
+  background: #f5f5f5;
+  color: #000;
+}
+
+/* Footer */
+body[data-theme="light"] .footer {
+  background: #e8eef6;
+  color: #444;
+}
+
+/* ====================================================
+        NAVBAR BASE
+==================================================== */
+.navbar {
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Simple Theme Toggle Button */
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+/* Hover animation */
+.theme-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Colors for emoji based on theme */
+body[data-theme="dark"] .theme-btn {
+  color: #facc15; /* Moon yellow */
+}
+
+body[data-theme="light"] .theme-btn {
+  color: #eab308; /* Sun gold */
+}
+
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #5bc6ff;
 }
 
 .nav-links {
@@ -33,19 +167,19 @@ body {
 
 .nav-links li {
   cursor: pointer;
-  color: #bbb;
 }
 
+/* Login Button */
 .login-btn {
-  background: #2563eb;
-  color: white;
   padding: 10px 25px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
 }
 
-/* HERO */
+/* ====================================================
+        HERO SECTION
+==================================================== */
 .hero {
   text-align: center;
   padding: 80px 20px;
@@ -57,7 +191,6 @@ body {
 }
 
 .hero p {
-  color: #cccccc;
   margin-bottom: 25px;
 }
 
@@ -84,7 +217,9 @@ body {
   cursor: pointer;
 }
 
-/* COURSES */
+/* ====================================================
+        COURSES
+==================================================== */
 .courses {
   padding: 40px;
 }
@@ -96,18 +231,13 @@ body {
 }
 
 .course-card {
-  background: #141c27;
   padding: 25px;
   border-radius: 12px;
-  border: 1px solid #2c3a4d;
 }
 
-.course-card:hover {
-  border-color: #0ea5e9;
-  transition: 0.3s;
-}
-
-/* TESTIMONIALS */
+/* ====================================================
+        TESTIMONIALS
+==================================================== */
 .testimonials {
   margin: 60px 40px;
   display: grid;
@@ -116,13 +246,13 @@ body {
 }
 
 .test-card {
-  background: white;
-  color: black;
   padding: 25px;
   border-radius: 12px;
 }
 
-/* PRICING */
+/* ====================================================
+        PRICING
+==================================================== */
 .pricing {
   padding: 40px;
   text-align: center;
@@ -136,15 +266,8 @@ body {
 }
 
 .price-card {
-  background: #141c27;
-  border: 1px solid #2c3a4d;
   padding: 30px;
   border-radius: 12px;
-}
-
-.price-card.highlight {
-  background: #2563eb;
-  border-color: #4ca4ff;
 }
 
 .price-card ul {
@@ -154,24 +277,21 @@ body {
 
 .price-card li {
   margin: 8px 0;
-  color: #e2e2e2;
 }
 
 .choose-btn {
   margin-top: 20px;
-  background: white;
-  color: black;
   padding: 12px 28px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
 }
 
-/* FOOTER */
+/* ====================================================
+        FOOTER
+==================================================== */
 .footer {
-  background: #0f1624;
   text-align: center;
   padding: 30px;
   margin-top: 40px;
-  color: #aaa;
 }

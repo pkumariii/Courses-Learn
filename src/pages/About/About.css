@@ -1,19 +1,92 @@
-/* Remove horizontal scroll */
+/* ====================================================
+      GLOBAL RESET
+==================================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ====================================================
+      ABOUT PAGE BASE
+==================================================== */
 .about-page {
   width: 100%;
   min-height: 100vh;
   padding: 60px 120px;
-  background: #0f172a;
-  color: #e2e8f0;
-  overflow-x: hidden;  /* 👈 Prevent horizontal scrolling */
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* ====================================================
+      DARK THEME
+==================================================== */
+body[data-theme="dark"] .about-page {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body[data-theme="dark"] .glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body[data-theme="dark"] .team-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body[data-theme="dark"] .team-card p {
+  color: #cbd5e1;
+}
+
+/* ====================================================
+      LIGHT THEME
+==================================================== */
+body[data-theme="light"] .about-page {
+  background: #ffffff;
+  color: #000000;
+}
+
+body[data-theme="light"] .about-header h1 {
+  color: #000;
+}
+
+body[data-theme="light"] .about-header p {
+  color: #444;
+}
+
+body[data-theme="light"] .glass-card {
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid #d0d4db;
+}
+
+body[data-theme="light"] .glass-card h2,
+body[data-theme="light"] .glass-card h3 {
+  color: #000;
+}
+
+body[data-theme="light"] .glass-card p,
+body[data-theme="light"] .glass-card li {
+  color: #333;
+}
+
+body[data-theme="light"] .team-card {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: #b5b5b5;
+}
+
+body[data-theme="light"] .team-card h4 {
+  color: #000;
+}
+
+body[data-theme="light"] .team-card p {
+  color: #555;
+}
+
+/* ====================================================
+      HEADER SECTION
+==================================================== */
 .about-header {
   text-align: center;
   margin-bottom: 60px;
@@ -21,84 +94,76 @@
 
 .about-header h1 {
   font-size: 36px;
-  color: #fff;
   margin-bottom: 15px;
+  transition: color 0.3s ease;
 }
 
 .about-header p {
-  color: #94a3b8;
   font-size: 18px;
+  transition: color 0.3s ease;
 }
 
+/* ====================================================
+      GLASS CARDS
+==================================================== */
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
   padding: 30px;
   border-radius: 16px;
   margin-bottom: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  max-width: 100%;  /* 👈 avoids overflow */
+  max-width: 100%;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
-.about-section h2 {
-  color: #fff;
-}
-
-/* Responsive grid */
+/* ====================================================
+      GRID SECTION
+==================================================== */
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 👈 Responsive fix */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  width: 100%;  /* avoid overflow */
 }
 
 .about-grid h3 {
-  color: #fff;
+  margin-bottom: 10px;
 }
 
 .about-grid ul li {
   margin-bottom: 6px;
-  color: #94a3b8;
 }
 
-/* team section */
+/* ====================================================
+      TEAM SECTION
+==================================================== */
 .team-section h2 {
   text-align: center;
-  color: #fff;
   margin-bottom: 25px;
+  transition: color 0.3s ease;
 }
 
 .team-grid {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap;  /* 👈 prevent overflow */
-  width: 100%;
+  flex-wrap: wrap;
 }
 
 .team-card {
   flex: 1;
-  min-width: 260px;  /* responsive */
+  min-width: 260px;
   padding: 20px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
-.team-card h4 {
-  color: #fff;
-  margin-bottom: 5px;
-}
-
-.team-card p {
-  color: #94a3b8;
-}
-
-/* Mobile responsive */
+/* ====================================================
+      MOBILE RESPONSIVE
+==================================================== */
 @media (max-width: 768px) {
   .about-page {
-    padding: 40px 20px; /* reduce padding so no overflow */
+    padding: 40px 20px;
   }
 
   .team-grid {
