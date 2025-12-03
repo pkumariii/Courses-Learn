@@ -1,0 +1,107 @@
+/* Remove horizontal scroll */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 120px;
+  background: #0f172a;
+  color: #e2e8f0;
+  overflow-x: hidden;  /* 👈 Prevent horizontal scrolling */
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-header h1 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.about-header p {
+  color: #94a3b8;
+  font-size: 18px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  max-width: 100%;  /* 👈 avoids overflow */
+}
+
+.about-section h2 {
+  color: #fff;
+}
+
+/* Responsive grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 👈 Responsive fix */
+  gap: 30px;
+  width: 100%;  /* avoid overflow */
+}
+
+.about-grid h3 {
+  color: #fff;
+}
+
+.about-grid ul li {
+  margin-bottom: 6px;
+  color: #94a3b8;
+}
+
+/* team section */
+.team-section h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;  /* 👈 prevent overflow */
+  width: 100%;
+}
+
+.team-card {
+  flex: 1;
+  min-width: 260px;  /* responsive */
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.team-card h4 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.team-card p {
+  color: #94a3b8;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 40px 20px; /* reduce padding so no overflow */
+  }
+
+  .team-grid {
+    flex-direction: column;
+  }
+}

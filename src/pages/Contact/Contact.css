@@ -1,0 +1,125 @@
+.contact-page {
+  width: 100%;
+  padding: 50px 120px;
+  background: #0f172a;
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+.contact-header {
+  margin-bottom: 40px;
+}
+
+.contact-header h4 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.contact-header h1 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  color: #94a3b8;
+}
+
+/* Layout */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 30px;
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Left Form */
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #cbd5e1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  color: #e2e8f0;
+}
+
+.primary-btn {
+  background: #3b82f6;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.note {
+  margin-top: 10px;
+  color: #64748b;
+}
+
+/* Right Side Boxes */
+.right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info h3,
+.helpful-box h3 {
+  color: #fff;
+}
+
+.contact-info h4 {
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 6px;
+}
+
+.map {
+  background: url("https://via.placeholder.com/350x200") no-repeat center/cover;
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+/* Helpful links */
+.helpful-box ul {
+  margin-top: 10px;
+}
+
+.helpful-box ul li {
+  margin-bottom: 10px;
+  color: #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page {
+    padding: 40px 20px;
+  }
+}

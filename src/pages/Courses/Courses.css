@@ -1,0 +1,102 @@
+.courses-page {
+  width: 100%;
+  padding: 50px 120px;
+  background: #0f172a;
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+.courses-header {
+  margin-bottom: 40px;
+}
+
+.courses-header h4 {
+  color: #38bdf8;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.courses-header h1 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.courses-header p {
+  color: #94a3b8;
+}
+
+.courses-layout {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 30px;
+}
+
+/* LEFT SIDE FORM */
+.course-form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  display: block;
+  color: #cbd5e1;
+}
+
+.course-form select,
+.course-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  border-radius: 8px;
+}
+
+.primary-btn {
+  background: #3b82f6;
+  padding: 12px 16px;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.note {
+  margin-top: 10px;
+  color: #64748b;
+}
+
+/* RIGHT SIDE BOXES */
+.right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.course-info ul,
+.highlights-box ul {
+  margin: 15px 0;
+}
+
+.course-info li,
+.highlights-box li {
+  margin-bottom: 8px;
+  color: #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .courses-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-page {
+    padding: 40px 20px;
+  }
+}

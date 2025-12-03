@@ -1,0 +1,177 @@
+/* GENERAL */
+body {
+  margin: 0;
+  background: #0d1117;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.main {
+  width: 100%;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #0f1624;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5bc6ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  color: #bbb;
+}
+
+.login-btn {
+  background: #2563eb;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #cccccc;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.primary-btn {
+  background: #2563eb;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: white;
+  color: black;
+  padding: 12px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* COURSES */
+.courses {
+  padding: 40px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.course-card {
+  background: #141c27;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #2c3a4d;
+}
+
+.course-card:hover {
+  border-color: #0ea5e9;
+  transition: 0.3s;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  margin: 60px 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.test-card {
+  background: white;
+  color: black;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+/* PRICING */
+.pricing {
+  padding: 40px;
+  text-align: center;
+}
+
+.pricing-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.price-card {
+  background: #141c27;
+  border: 1px solid #2c3a4d;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.price-card.highlight {
+  background: #2563eb;
+  border-color: #4ca4ff;
+}
+
+.price-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.price-card li {
+  margin: 8px 0;
+  color: #e2e2e2;
+}
+
+.choose-btn {
+  margin-top: 20px;
+  background: white;
+  color: black;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  background: #0f1624;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+  color: #aaa;
+}
